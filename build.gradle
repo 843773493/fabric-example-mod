@@ -3,7 +3,7 @@ plugins {
 	id 'maven-publish'
 }
 
-version = project.mod_version
+version = "${project.mod_version}+${project.minecraft_version}"  // 关键修改
 group = project.maven_group
 
 base {
@@ -16,13 +16,27 @@ repositories {
 	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
+	maven {
+		name = 'Fabric'
+		url = 'https://maven.fabricmc.net/'
+	}
+	maven {
+		name = "Shedaniel"
+		url = "https://maven.shedaniel.me/"
+	}
+	maven {
+		name = "TerraformersMC" 
+		url = "https://maven.terraformersmc.com/"
+	}
+	maven { url = 'https://jitpack.io' }
 }
+
 
 loom {
     splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"hyf_20250817_test" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
@@ -39,6 +53,15 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	
+    // 使用兼容 Minecraft 1.20.1 的 Cloth Config 版本
+    modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
+    modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+    
+    // 使用 Baritone API 作为编译时依赖（不打包到最终JAR中）， 下载不了算了，用本地方案
+	// modCompileOnly 'com.github.cabaletta:baritone:v1.10.3' 
+	// implementation 'com.github.cabaletta:baritone:v1.10.3'
+	compileOnly files('libs/baritone-api-fabric-1.10.3.jar')
+
 }
 
 processResources {
@@ -59,8 +82,8 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_21
-	targetCompatibility = JavaVersion.VERSION_21
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {

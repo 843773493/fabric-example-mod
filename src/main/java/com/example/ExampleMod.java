@@ -1,22 +1,25 @@
 package com.example;
 
-import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExampleMod implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-    public static final Logger LOGGER = LoggerFactory.getLogger("modid");
+import com.example.item.ModBlocks;
+import com.example.item.ModItemGroups;
 
-	@Override
-	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+import net.fabricmc.api.ModInitializer;
 
-		LOGGER.info("Hello Fabric world!");
-	}
+public class ExampleMod implements ModInitializer{
+    public static final String MOD_ID = "hyf_20250817_test";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    
+
+    @Override
+    public void onInitialize() {
+        LOGGER.info("Hello Fabric world!");
+        
+        // 注册方块和物品
+        ModBlocks.registerBlocks();
+        ModItemGroups.registerItemGroups();
+        
+    }
 }

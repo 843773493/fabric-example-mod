@@ -1,0 +1,25 @@
+{
+  "block.hyf_20250817_test.oak_stone": "Oak Stone",
+  "itemGroup.hyf_20250817_test.mod_test": "Mod Test 1",
+
+  "text.autoconfig.hyf_20250817_test.title": "Flight Enhancement Config",
+  "text.autoconfig.hyf_20250817_test.category.default": "General Settings",
+  
+  "text.autoconfig.hyf_20250817_test.option.flightSpeed": "Flight Speed",
+  "text.autoconfig.hyf_20250817_test.option.flightSpeed.@Tooltip": "Controls the flying speed in creative mode. Higher values = faster flight. Recommended range: 0.05-1.0",
+  
+  "text.autoconfig.hyf_20250817_test.option.stopDampening": "Stop Dampening",
+  "text.autoconfig.hyf_20250817_test.option.stopDampening.@Tooltip": "Controls how quickly you stop when releasing movement keys. Lower values = stop faster, Higher values = more momentum",
+  
+  "text.autoconfig.hyf_20250817_test.option.enableFlightModification": "Enable Flight Modification",
+  "text.autoconfig.hyf_20250817_test.option.enableFlightModification.@Tooltip": "Master switch to enable/disable all flight-related modifications",
+
+  "text.autoconfig.hyf_20250817_test.option.disableCaves": "Disable Cave Generation",
+  "text.autoconfig.hyf_20250817_test.option.disableCaves.@Tooltip": "Disable the natural generation of all caves. When enabled, no caves will generate in the world",
+
+  "text.autoconfig.hyf_20250817_test.option.preventSurfaceHoles": "Prevent Surface Holes",
+  "text.autoconfig.hyf_20250817_test.option.preventSurfaceHoles.@Tooltip": "Prevent ore generation near the surface, preventing holes from appearing on the ground",
+
+  "text.autoconfig.hyf_20250817_test.option.surfaceProtectionLevel": "Surface Protection Level",
+  "text.autoconfig.hyf_20250817_test.option.surfaceProtectionLevel.@Tooltip": "Y coordinate threshold. Ore above this value will not be generated. Default 58 = 5 blocks above sea level (63)"
+}

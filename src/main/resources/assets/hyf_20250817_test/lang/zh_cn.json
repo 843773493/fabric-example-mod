@@ -1,0 +1,21 @@
+{
+  "block.hyf_20250817_test.oak_stone": "橡木石头",
+  "itemGroup.hyf_20250817_test.mod_test": "模组测试1",
+  "generator.hyf_20250817_test.tall_world": "更高的世界",
+
+  "text.autoconfig.hyf_20250817_test.title": "飞行增强模组配置",
+  "text.autoconfig.hyf_20250817_test.category.default": "基本设置",
+  
+  "text.autoconfig.hyf_20250817_test.option.flightSpeed": "飞行速度",
+  "text.autoconfig.hyf_20250817_test.option.flightSpeed.@Tooltip": "控制创造模式下的飞行速度。数值越大飞得越快，建议范围：0.05-1.0",
+  
+  "text.autoconfig.hyf_20250817_test.option.stopDampening": "停止阻力",
+  "text.autoconfig.hyf_20250817_test.option.stopDampening.@Tooltip": "控制松开移动键时的减速效果。数值越小停得越快，数值越大惯性越强",
+  
+  "text.autoconfig.hyf_20250817_test.option.enableFlightModification": "启用飞行修改",
+  "text.autoconfig.hyf_20250817_test.option.enableFlightModification.@Tooltip": "总开关，控制是否启用所有飞行相关的修改功能",
+
+  "key.autoforward.toggle": "自动前进切换",
+  "category.autoforward": "自定义功能"
+
+}

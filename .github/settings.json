@@ -1,0 +1,13 @@
+{
+    "java.configuration.runtimes": [
+    {
+        "name": "JavaSE-17",
+        "path": "C:\\Users\\84377\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\17",
+        "default": true
+    },
+    {
+        "name": "JavaSE-21",
+        "path": "C:\\Users\\84377\\AppData\\Roaming\\Code\\User\\globalStorage\\pleiades.java-extension-pack-jdk\\java\\21"
+    }
+]
+}
