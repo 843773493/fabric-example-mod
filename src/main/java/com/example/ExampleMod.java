@@ -15,7 +15,7 @@ public class ExampleMod implements ModInitializer{
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Hello Fabric world!");
+        LOGGER.info("Hello Fabric world! hahaha");
         
         // 注册方块和物品
         ModBlocks.registerBlocks();
